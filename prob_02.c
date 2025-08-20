@@ -2,6 +2,7 @@
 
 int main(){
     int n;
+    
     int i, j;
     printf("N: ");
     scanf("%d", &n);

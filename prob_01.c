@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+
 int main(){
     int edad, euros;
     printf("Edad: ");
