@@ -4,11 +4,10 @@ int main(){
     FILE *ent, *sal;
     char magica[5];
     char comen[100];
-    int ancho, alto, grises, pixel, i, j, cont = 0;
-    unsigned int pixeles[800][800];
-
+    int ancho, alto, grises, pixel;
+    
     ent = fopen("Cartagena.pgm", "r");
-    sal = fopen("Cartagena_1.pgm", "w"); 
+    sal = fopen("Cartagena_4.pgm", "w"); 
     fgets(magica, 5, ent);
     fprintf(sal, "%s", magica);
     fgets(comen, 100, ent);
@@ -17,11 +16,13 @@ int main(){
     fscanf(ent, "%d", &alto);
     fscanf(ent, "%d", &grises);   
     fprintf(sal, "%d %d\n%d\n", ancho, alto, grises); 
-    for (i = 0; i < alto; i++){
-        for (j = 0; j < ancho; j++){
+    for (int i = 0; i < alto; i++){
+        for (int j = 0; j < ancho; j++){
             fscanf(ent, "%d", &pixel);
+            pixel = pixel + 60;
+            if (pixel > 255)
+                pixel = 255;
             fprintf(sal, "%d\n", pixel);
-            pixeles[i][j] = pixel;
         }
     }
 

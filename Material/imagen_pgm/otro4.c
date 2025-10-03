@@ -20,7 +20,7 @@ int main(){
     char *nombre;
     IMAGEN original;
     int i, j;
-    lectura_imagen("Cartagena_nega_ch.pgm", &original);
+    lectura_imagen("Cartagena.pgm", &original);
     uint32_t buf[original.ancho * original.alto];
     struct fenster f = { .title = "Mas clara", .width = original.ancho, .height = original.alto, .buf = buf };
     //revisa(original);
@@ -66,7 +66,7 @@ void revisa(IMAGEN original){
 
 void crea_archivo(IMAGEN original){
     FILE *sal;
-    sal = fopen("Cartagena_duplicado.pgm", "w"); 
+    sal = fopen("Cartagena_dup.pgm", "w"); 
     fprintf(sal, "%s", original.magica);
     fprintf(sal, "# Duplicado\n");
     fprintf(sal, "%d %d\n%d\n", original.ancho, original.alto, original.grises); 

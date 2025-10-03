@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define N 5
+#define N 8
 #define ncuad N*N
 
 void mover(int tablero[][N], int i, int pos_x, int pos_y, int *q);
@@ -16,7 +16,7 @@ int main() {
             tablero[i][j] = 0;
 
     /* pone el primer movimiento */
-    tablero[3][3] = 1;
+    tablero[0][1] = 1;
     mover(tablero, 2, 0, 0, &q);
 
     if (q) { /* hay solucion: la muestra. */
