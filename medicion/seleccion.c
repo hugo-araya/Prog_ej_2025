@@ -25,8 +25,8 @@ int main(){
             temp = vector[p];
             vector[p] = vector[k];
             vector[k] = temp;
+        }
     }
-}
  // Fin del ordenamiento
     //muestra(vector);
     printf("Para %d elementos realiza %d comparaciones\n", LIMITE, cont);
